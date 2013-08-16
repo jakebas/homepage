@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<h2>Computer Science</h2>
+
+<h3>Research</h3>
+<p>I spent the 2009 summer modifying the serial <a href="http://www.madalgo.au.dk/Trac-TerraSTREAMTerrastream"> TerraSTREAM </a> implementation for processing large LIDAR data sets to leverage parallel computing on general purpose processors in a lab environment. The improved algorithm farms groups of the points to be interpolated out to as many processors as are available and interpolates these groups in parallel, drastically reducing the runtime of the algorithm. Using MPI, a flexible framework for implementing parallel algorithms, the new code collects the results from each processor and writes a file that can be processed by <a href ="http://grass.osgeo.org/">GRASS</a>, an open source GIS program. The data collected show a speed up proportional to the number of processors used from 3 up to the maximum number of processors we have been able to test (98). For an example of the speed up attained from parallelization, creating an image of 358 sq. miles of the Neuse river basin in North Carolina at 20 ft resolution took over 46 hours serially, but completed in under two hours using 98 processors.</p>
+
+<p>The results of this research, were published in the paper <a href = "http://www.cs.swarthmore.edu/~adanner/docs/acmGIS12MPICUDA.pdf"> Hybrid MPI/GPU Interpolation for Grid DEM Construction</a> as part of the ACM Symposium on Advances in Geographic Information Systems in 2012.</p>
+
+<h3>Relevant Coursework</h3>
+<ul>
+	<li>Parallel and Distributed Systems</li>
+	<li>Computer Vision</li>
+	<li>Natural Language Processing</li>
+	<li>Algorithms</li>
+	<li>Data Structures</li>
+	<li>Structure and Interpretation of Computer Programs</li>
+</ul>
+{% endblock %}
+
